@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+text-decoration: none;
+border: none;
+outline: none;
+font-family: 'Poppins',sans-serif;
+}
+
+html{
+font-size: 63%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden;
+    background: linear-gradient(to right, #10140E, #000000) ;
+    color: #FEFEFE;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    filter: drop-shadow(10px);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+
+    font-size: 4rem;
+    color: #BFCEB2;
+    font-weight: 500;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+
+.logo:hover{
+transform:scale(1.1);
+}
+
+nav a{
+    font-size: 2rem;
+    color: #FEFEFE;
+    margin-left: 3.9rem;
+    font-weight: 500;
+    transition: 0.3 ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,nav a.active{
+    color:#BFCEB2;
+    border-bottom: 3px solid;
+}
+
+
+@media(max-width:995px){
+   nav{
+    position:absolute;
+    top:100%;
+    right:0;
+    width:40%;
+    border-left:3px solid #BFCEB2;
+    border-bottom: 3px solid #BFCEB2;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: #1C1C1B;
+    border-top: 0.1rem solid rgba(0,0,0, 0.1);
+   } 
+   nav.active{
+    display:block;
+   }
+   
+   nav.a{
+    display:block;
+    font-size: 2rem;
+    margin: 3rem 0; 
+   }
+
+   nav a:hover,nav a.active{
+    padding:0.1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #BFCEB2;
+   }
+
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8rem;
+    background: linear-gradient(270deg, #10140E, #0C090B) ;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color:#BFCEB2;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position:relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #BFCEB2;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 490;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.3rem;
+    height: 4.3rem;
+    background-color: transparent;
+    border:0.2px solid #BFCEB2;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.2s ease;
+    color:rgb(233, 245, 179);
+
+}
+
+.social-icons a:hover{
+   color:#10140E;
+   transform: scale(1.3) translateY();
+   background-color: #BFCEB2;
+   box-shadow: 0 0 10px #BFCEB2;
+}
+
+.btn{
+display: inline-block;
+padding:1rem 2.8rem;
+background-color:#10140E;
+border-radius: 4rem;
+font-size: 1.6rem;
+color: #BFCEB2;
+letter-spacing: 0.1rem;
+font-weight: 600;
+border: 2px solid #BFCEB2;
+transition: 0.2s ease;
+cursor: pointer;
+}
+
+p{
+    font-size: 16px;
+    text-align: justify;
+}
+
+.btn:hover{
+transform: scale3d(1.03);
+background-color: #BFCEB2;
+color:#10140E;
+box-shadow: 0 0  10px #BFCEB2;
+}
+
+.typing-text{
+font: size 34px;
+font-weight: 600;
+min-width: 280px;
+}
+
+.typing-text span{
+    position:relative;
+
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color:#BFCEB2;
+    animation:words 8s infinite;
+}
+
+
+
+.typing-text span::after{
+    content:"";
+    background-color: #10140E;
+    position:absolute;
+    width:calc(100%+8px);
+    height: 100%;
+    border-left:3px solid #10140E;
+    right:-8;
+    animation: cursor 0.2 infinite;
+
+
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Dev soon..";
+    }
+    21%, 40%{
+        content: "Developer";
+    }
+    41%, 60%{
+        content: "Gamer";
+    }
+    61%, 80%{
+        content: "Streamer";
+    }
+    81%, 100%{
+        content: "PC Enthusiast";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
